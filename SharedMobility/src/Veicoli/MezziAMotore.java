@@ -19,8 +19,10 @@ public class MezziAMotore extends Veicoli{
 
     @Override
     public String toString(){
-        return super.toString() + 
+        String s = "" + this.getClass();
+        String[] split = s.split("\\.");
+        return split[split.length-1] + " {" + super.toString() + 
          ", targa: " + getTarga() +
-         ", patente richiesta: " + getPatenteRichiesta();
+         ", patente richiesta: " + getPatenteRichiesta() + " }";
     }
 }
